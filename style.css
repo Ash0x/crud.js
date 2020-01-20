@@ -1,5 +1,11 @@
-.nav {background-color: aliceblue;
-border-radius: 25%;
+table {background-color: aliceblue;
+
 border: 1px solid black;
 }
-.nav:hover {background-color: rebeccapurple ;}
+
+input[type='submit'], button, [aria-label]{
+    cursor: pointer;
+  }
+  #spoiler{
+    display: none;
+  }

@@ -1,13 +1,30 @@
 <html>
     <head>
 <link rel="stylesheet" href="style.css">
-<script src="my.js"></script>
+
+<title>Simple JS CRUD</title>
     </head>
     <body>
-        <div class="header">
-            <button class="nav">Intro</button>
-            <button class="nav">About</button>
-            <button class="nav">Contact</button>
-        </div>
+        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+            <input type="text" id="add-name" placeholder="New country">
+            <input type="submit" value="Add">
+          </form>
+          
+          <div id="spoiler" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="saveEdit">
+              <input type="text" id="edit-name">
+              <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+            </form>
+          </div>
+
+        <p id="counter"></p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <tbody id="countries"></tbody>
+        </table>
+        <script src="my.js"></script>
     </body>
 </html>
